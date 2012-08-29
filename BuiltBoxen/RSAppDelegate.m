@@ -7,12 +7,23 @@
 //
 
 #import "RSAppDelegate.h"
+#import "RSWindowController.h"
 
 @implementation RSAppDelegate
+
+@synthesize windowController;
+- (void) awakeFromNib {
+    windowController = [[RSWindowController alloc] init];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
 }
+
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return YES;
+}
+
 
 @end

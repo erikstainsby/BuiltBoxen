@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class RSWindowController;
 
 @interface RSAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet RSWindowController * windowController;
 
 @end
